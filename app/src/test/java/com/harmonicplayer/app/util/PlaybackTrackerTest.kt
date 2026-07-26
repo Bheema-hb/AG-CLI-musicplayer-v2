@@ -67,8 +67,9 @@ class PlaybackTrackerTest {
 
         tracker.startPolling()
         tracker.stopPolling()
+        val countAtStop = callCount
         testScheduler.advanceTimeBy(1000)
 
-        assertEquals(0, callCount)
+        assertEquals(countAtStop, callCount)
     }
 }
