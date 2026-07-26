@@ -92,6 +92,17 @@ class PlayerViewModel @Inject constructor(
         }
     }
 
+    private fun updateUiFromPlayer() {
+        val controller = mediaController ?: return
+        _uiState.update {
+            it.copy(
+                isPlaying = controller.isPlaying,
+                currentPlaybackPosition = controller.currentPosition.coerceAtLeast(0L),
+                totalDuration = if (controller.duration > 0L) controller.duration else it.totalDuration
+            )
+        }
+    }
+
     private fun loadSongs() {
         viewModelScope.launch {
             musicRepository.getSongs().collectLatest { songs ->
