@@ -57,7 +57,11 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-process:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
+
+    // Security Crypto
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
 
     // Jetpack Compose
     implementation(platform("androidx.compose:compose-bom:2024.02.00"))
