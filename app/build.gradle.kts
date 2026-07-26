@@ -57,7 +57,11 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-process:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
+
+    // Security Crypto
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
 
     // Jetpack Compose
     implementation(platform("androidx.compose:compose-bom:2024.02.00"))
@@ -66,6 +70,10 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
+
+    // Image Loading
+    implementation("io.coil-kt:coil-compose:2.6.0")
 
     // Room SQLite
     implementation("androidx.room:room-runtime:2.6.1")
@@ -79,6 +87,8 @@ dependencies {
     // Hilt Dependency Injection
     implementation("com.google.dagger:hilt-android:2.50")
     ksp("com.google.dagger:hilt-compiler:2.50")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("androidx.compose.material:material-icons-extended")
 
     // Jetpack Media3
     implementation("androidx.media3:media3-exoplayer:1.2.1")
@@ -92,6 +102,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
     testImplementation("org.mockito:mockito-core:5.10.0")
     testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
+    testImplementation("app.cash.turbine:turbine:1.0.0")
+    testImplementation("io.mockk:mockk:1.13.9")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2024.02.00"))

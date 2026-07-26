@@ -23,7 +23,7 @@ object DatabaseModule {
         return Room.databaseBuilder(
             context,
             AppDatabase::class.java,
-            "harmonic_player_db"
+            "harmonic_player.db"
         ).fallbackToDestructiveMigration().build()
     }
 
