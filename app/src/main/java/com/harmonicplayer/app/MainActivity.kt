@@ -16,6 +16,10 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.harmonicplayer.app.ui.library.LibraryViewModel
+import com.harmonicplayer.app.ui.library.MainLibraryScreen
+import androidx.compose.ui.Modifier
 import com.harmonicplayer.app.ui.library.AllSongsScreen
 import com.harmonicplayer.app.ui.library.LibraryViewModel
 import androidx.compose.material3.Text
@@ -57,6 +61,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    val viewModel: LibraryViewModel = hiltViewModel()
+                    MainLibraryScreen(viewModel = viewModel)
                     AllSongsScreen(
                         viewModel = libraryViewModel,
                         onSongClick = { _ ->

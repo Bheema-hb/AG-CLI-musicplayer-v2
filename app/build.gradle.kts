@@ -87,6 +87,8 @@ dependencies {
     // Hilt Dependency Injection
     implementation("com.google.dagger:hilt-android:2.50")
     ksp("com.google.dagger:hilt-compiler:2.50")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("androidx.compose.material:material-icons-extended")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
