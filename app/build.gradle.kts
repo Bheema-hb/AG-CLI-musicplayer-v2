@@ -90,9 +90,18 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("androidx.compose.material:material-icons-extended")
 
+    // Jetpack Media3
+    implementation("androidx.media3:media3-exoplayer:1.2.1")
+    implementation("androidx.media3:media3-session:1.2.1")
+    implementation("androidx.media3:media3-ui:1.2.1")
+    implementation("androidx.media3:media3-common:1.2.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.8.0")
+
     // Testing
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
+    testImplementation("org.mockito:mockito-core:5.10.0")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
     testImplementation("app.cash.turbine:turbine:1.0.0")
     testImplementation("io.mockk:mockk:1.13.9")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

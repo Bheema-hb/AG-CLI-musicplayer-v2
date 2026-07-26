@@ -8,6 +8,9 @@ import kotlinx.coroutines.flow.Flow
 
 interface MusicRepository {
     fun getSongs(): Flow<List<Song>>
+    suspend fun markFavorite(songId: Long)
+    suspend fun removeFavorite(songId: Long)
+    fun isFavorite(songId: Long): Flow<Boolean>
     fun getAlbums(): Flow<List<Album>>
     fun getArtists(): Flow<List<Artist>>
     fun getPlaylists(): Flow<List<Playlist>>

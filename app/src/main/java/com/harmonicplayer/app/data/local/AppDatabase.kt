@@ -4,6 +4,8 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.harmonicplayer.app.data.local.dao.PlaylistDao
 import com.harmonicplayer.app.data.local.entity.FavoriteSongEntity
+
+@Database(entities = [FavoriteSongEntity::class], version = 1, exportSchema = false)
 import com.harmonicplayer.app.data.local.entity.PlaylistEntity
 import com.harmonicplayer.app.data.local.entity.PlaylistSongCrossRef
 import com.harmonicplayer.app.data.local.entity.RecentlyPlayedEntity

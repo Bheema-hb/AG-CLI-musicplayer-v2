@@ -16,6 +16,9 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.harmonicplayer.app.ui.player.PlayerScreen
+import com.harmonicplayer.app.ui.player.PlayerViewModel
+import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.harmonicplayer.app.ui.library.LibraryViewModel
 import com.harmonicplayer.app.ui.library.MainLibraryScreen
@@ -44,6 +47,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+    private val playerViewModel: PlayerViewModel by viewModels()
     private val libraryViewModel: LibraryViewModel by viewModels()
     @Inject
     lateinit var permissionManager: PermissionManager
@@ -61,6 +65,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    PlayerScreen(viewModel = playerViewModel)
                     val viewModel: LibraryViewModel = hiltViewModel()
                     MainLibraryScreen(viewModel = viewModel)
                     AllSongsScreen(
