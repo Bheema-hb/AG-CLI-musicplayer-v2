@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,6 +15,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
+import com.harmonicplayer.app.ui.library.AllSongsScreen
+import com.harmonicplayer.app.ui.library.LibraryViewModel
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -36,6 +40,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+    private val libraryViewModel: LibraryViewModel by viewModels()
     @Inject
     lateinit var permissionManager: PermissionManager
 
@@ -52,6 +57,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    AllSongsScreen(
+                        viewModel = libraryViewModel,
+                        onSongClick = { _ ->
+                            // Song selection callback handler
+                        }
+                    )
                     MainScreen(
                         permissionManager = permissionManager
                     )
