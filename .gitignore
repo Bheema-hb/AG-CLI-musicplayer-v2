@@ -1,0 +1,25 @@
+# Android & Gradle gitignore
+*.iml
+.gradle
+/local.properties
+/.idea/
+/.navigation/
+/.caches/
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/build
+/app/captures
+*.ap_
+*.apk
+*.aab
+*.dex
+*.class
+/bin/
+/gen/
+/out/
+.DS_Store
+thumbs.db
+# Android & Gradle gitignore template
